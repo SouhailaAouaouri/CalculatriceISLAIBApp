@@ -1,0 +1,37 @@
+<div style="margin-top: 200px;align-content: center">
+
+<div class="container-fluid">
+
+
+  <div class="jumbotron col-md-12 p-2 m-0 bg-inverse">
+    <ul>
+      <li class="m-2">Welcome <b>{{this.userName}} {{this.userLastName}}</b> </li>
+      <li class="m-2"><button class="btn btn-outline-danger" (click)="logOut()"><b>Log Out</b>  </button></li>
+    </ul>
+
+    <h1 class="text-center">Calculator </h1>
+
+    Numbers
+    <div class="input-group input-group-sm col-sm-12 m-0 p-0">
+        <input class="col-md-12 form-control text-lg-left m-1"  id="a" name="a" placeholder="Enter a" [formControl]="a"  (change)="test()">
+        <input class="col-md-12 form-control text-lg-left m-1"  id="b" name="b" placeholder="Enter b" [formControl]="b" >
+    </div>
+
+    Result
+    <div class="input-group input-group-sm col-sm-12 m-0 p-0">
+      <div class="form-control text-sm-right m-1" type="text">{{result}}</div>
+    </div>
+
+    <div class="col-sm-12 p-1 m-0 " >
+      <button class="btn btn-success col-2 m-r-4 m-l-200 " type="button" (click)="addFunction(this.a.value,this.b.value)" > <b>+</b></button>
+      <button class="btn btn-success col-2 m-r-4 m-l-5 " type="button" (click)="multiplicationFunction(this.a.value,this.b.value)"><b>*</b></button>
+      <button class="btn btn-success col-2 m-r-4 m-l-5 " type="button" (click)="sustractionFunction(this.a.value,this.b.value)" ><b>-</b></button>
+      <button class="btn btn-success col-2 m-r-4 m-l-5 " type="button" (click)="divsionFunction(this.a.value,this.b.value)" ><b>/</b></button>
+    </div>
+
+    </div>
+
+  </div>
+
+
+</div>
